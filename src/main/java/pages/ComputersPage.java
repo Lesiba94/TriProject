@@ -45,12 +45,23 @@ public class ComputersPage {
     private WebElement tcCheckbox;
     @FindBy(id = "checkout")
     private WebElement checkoutBtn;
+
+    @FindBy(id = "products-pagesize")
+    private WebElement pageSize;
+
     public void selectDesktop()
     {
         desktop.click();
         position.click();
         Select sel = new Select(position);
         sel.selectByIndex(1);
+
+        sel.selectByIndex(2);
+        sel.selectByIndex(2);
+        Select pageS = new Select(pageSize);
+        pageS.selectByIndex(1);
+        pageS.selectByIndex(2);
+
         cheapComputer.click();
         processorType.click();
         ramType.click();

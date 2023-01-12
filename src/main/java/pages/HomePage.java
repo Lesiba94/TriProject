@@ -20,8 +20,4 @@ public class HomePage {
     {
         computers.click();
     }
-    public void selectBooks()
-    {
-        books.click();
-    }
-}
+
