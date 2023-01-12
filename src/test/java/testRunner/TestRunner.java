@@ -69,19 +69,10 @@ public class TestRunner {
         app.checkoutPage.logOut();
     }
 
-<<<<<<< HEAD
-
-
     @AfterTest
     public void closeChrome()
-    {
-
-=======
-    @AfterTest
-    public void closeChrome()
-    {
->>>>>>> 4d8cd8b (Initial commit)
-        driver.close();
-        driver.quit();
-    }
+        {
+            driver.close();
+            driver.quit();
+        }
 }

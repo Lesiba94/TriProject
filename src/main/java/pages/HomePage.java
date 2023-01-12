@@ -7,17 +7,19 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
     private WebDriver _driver;
-    public HomePage(WebDriver driver)
-    {
+
+    public HomePage(WebDriver driver) {
         this._driver = driver;
-        PageFactory.initElements(_driver,this);
+        PageFactory.initElements(_driver, this);
     }
+
     @FindBy(partialLinkText = "COMPUTERS")
     private WebElement computers;
     @FindBy(partialLinkText = "Books")
     private WebElement books;
-    public void selectComputers()
-    {
+
+    public void selectComputers() {
         computers.click();
     }
 
+}
