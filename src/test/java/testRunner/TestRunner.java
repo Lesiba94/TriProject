@@ -36,7 +36,7 @@ public class TestRunner {
     }
 
     @Test(priority = 3)
-    public void removeItemFromCart()
+     public void removeItemFromCart()
     {
         app.computersPage.removeFromCart();
     }

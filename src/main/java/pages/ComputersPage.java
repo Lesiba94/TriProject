@@ -35,7 +35,7 @@ public class ComputersPage {
     private WebElement addToCart;
     @FindBy(partialLinkText = "shopping cart")
     private WebElement shoppingCart;
-    @FindBy(xpath = "//input[@name='removefromcart']")
+    @FindBy(xpath = "(//input[@name='removefromcart'])[1]")
     private WebElement removeFromCart;
     @FindBy(xpath = "//input[@name='updatecart']")
     private WebElement updatecart;
@@ -57,7 +57,8 @@ public class ComputersPage {
         sel.selectByIndex(1);
 
         sel.selectByIndex(2);
-        sel.selectByIndex(2);
+        sel.selectByIndex(3);
+        sel.selectByIndex(4);
         Select pageS = new Select(pageSize);
         pageS.selectByIndex(1);
         pageS.selectByIndex(2);
@@ -89,6 +90,7 @@ public class ComputersPage {
 
     public void removeFromCart()
     {
+        _driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         removeFromCart.click();
         updatecart.click();
         if(orderSummaryContent.getText().equalsIgnoreCase("Your Shopping Cart is empty!"))
