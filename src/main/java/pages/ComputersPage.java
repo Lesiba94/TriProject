@@ -60,6 +60,7 @@ public class ComputersPage {
         sel.selectByIndex(3);
         sel.selectByIndex(4);
         Select pageS = new Select(pageSize);
+        pageS.selectByIndex(0);
         pageS.selectByIndex(1);
         pageS.selectByIndex(2);
 
